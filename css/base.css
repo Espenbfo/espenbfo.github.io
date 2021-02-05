@@ -22,7 +22,7 @@ body {
         max-width: unset;
         height: unset;
         grid-template-columns: 2fr 2fr;
-        grid-template-rows: 40px 250px 40px 100px 40px 300px 1fr;
+        grid-template-rows: 40px 250px 40px 100px 40px 600px 1fr;
         grid-template-areas:
         ". ."
         "header header"
