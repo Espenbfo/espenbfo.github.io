@@ -1,0 +1,97 @@
+body {
+    background-color: #fdfdfd;
+    height:100%;
+    min-width: 1000px;
+    max-width: 2000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr 2fr 1fr;
+    grid-template-rows: 40px 250px 40px 100px 600px 1fr;
+    grid-template-areas:
+    ". . . . ."
+    ". left-area-upper header right-area-upper ."
+    ". . . . ."
+    "middle middle middle middle middle"
+    ". left-area-lower main right-area-lower ."
+    ". footer footer footer ."
+}
+
+@media (max-width: 1000px) {
+    body {
+        min-width: 100%;
+        max-width: unset;
+        height: unset;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 40px 250px 40px 100px 40px 300px 1fr;
+        grid-template-areas:
+        ". ."
+        "header header"
+        ". ."
+        "middle middle"
+        ". ."
+        "left-area-upper left-area-upper"
+        "left-area-lower right-area-lower"
+        "footer footer";
+    }
+
+    #header {
+        font-size: 5rem!important;
+    }
+    #right-area-upper {
+        display: none;
+    }
+
+}
+#header {
+    grid-area: header;
+
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: #000000;
+    font-size: 3.6rem;
+    text-align: center;
+    margin: auto;
+}
+
+#main {
+    grid-area: main;
+    background-color: #fdfdfd;
+    text-align: center;
+}
+
+#middle {
+    grid-area: middle;
+    background-color: #e3e3e3;
+    text-align: center;
+}
+
+#left-area-upper {
+    grid-area: left-area-upper;
+    background-color: #fdfdfd;
+    text-align: center;
+}
+#left-area-lower {
+    grid-area: left-area-lower;
+    background-color: #fdfdfd;
+    text-align: center;
+}
+
+#right-area-upper {
+    font-size: 1.5em;
+    grid-area: right-area-upper;
+    background-color: #fdfdfd;
+    text-align: center;
+}
+#right-area-lower {
+    font-size: 1.5em;
+    grid-area: right-area-lower;
+    background-color: #fdfdfd;
+    text-align: center;
+}
+
+#footer {
+    grid-area: footer;
+    background-color: #ffffff;
+    text-align: center;
+    font-family: sans-serif;
+}
