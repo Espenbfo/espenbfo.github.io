@@ -55,7 +55,7 @@ body {
 
 #main {
     grid-area: main;
-    background-color: #fdfdfd;
+    /*background-color: #fdfdfd;*/
     text-align: center;
 }
 
@@ -67,31 +67,31 @@ body {
 
 #left-area-upper {
     grid-area: left-area-upper;
-    background-color: #fdfdfd;
+    /*background-color: #fdfdfd;*/
     text-align: center;
 }
 #left-area-lower {
     grid-area: left-area-lower;
-    background-color: #fdfdfd;
+    /*background-color: #fdfdfd;*/
     text-align: center;
 }
 
 #right-area-upper {
     font-size: 1.5em;
     grid-area: right-area-upper;
-    background-color: #fdfdfd;
+    /*background-color: #fdfdfd;*/
     text-align: center;
 }
 #right-area-lower {
     font-size: 1.5em;
     grid-area: right-area-lower;
-    background-color: #fdfdfd;
+    /*background-color: #fdfdfd;*/
     text-align: center;
 }
 
 #footer {
     grid-area: footer;
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     text-align: center;
     font-family: sans-serif;
 }
