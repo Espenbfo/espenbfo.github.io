@@ -5,9 +5,19 @@
 
 .image-container img {
     height: 100%;
-    width: 100%;
-    object-fit: contain;
-    border-radius: 50%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.header-text {
+    background: -webkit-linear-gradient(var(--background-color), rgba(135, 60, 255, 0.0) 0%),
+    -webkit-linear-gradient(-45deg, black 50%, #b8eeef 0%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;;
+
 }
 
 .misc-flexbox {
@@ -22,8 +32,8 @@
     width: 200px;
     height: 100%;
     text-decoration: none;
-    color: #473d3d;
-    background-color: #eeeeee;
+    color: #b8eeef;
+    background-color: #002828;
     margin-left: 10px;
     margin-right: 10px;
     line-height: 100px;
@@ -34,12 +44,21 @@
 }
 
 .misc-flexbox .item:hover {
-    background-color: #fcfcfc;
+    filter: brightness(120%);
 }
 
 .misc-flexbox .item:active {
-    background-color: #bababa;
+    filter: brightness(70%);
 }
+
 iframe {
-    position: fixed; width: 100%; height: 100%; top: 0; right: 0; bottom: 0; left: 0; z-index: -100; pointer-events: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -100;
+    pointer-events: none;
 }

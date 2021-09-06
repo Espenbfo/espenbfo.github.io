@@ -1,12 +1,16 @@
+:root {
+    --background-color: #ececec;
+}
+
 body {
-    background-color: #fdfdfd;
+    background-color: var(--background-color);
     height:100%;
     min-width: 1000px;
     max-width: 2000px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 2fr 4fr 2fr 1fr;
-    grid-template-rows: 40px 250px 40px 100px 600px 1fr;
+    grid-template-rows: 40px 250px 40px 100px 1fr 1fr;
     grid-template-areas:
     ". . . . ."
     ". left-area-upper header right-area-upper ."
@@ -36,6 +40,8 @@ body {
 
     #header {
         font-size: 5rem!important;
+        box-shadow: none!important;
+        border-radius: 0!important;
     }
     #right-area-upper {
         display: none;
@@ -43,14 +49,25 @@ body {
 
 }
 #header {
+    border-radius: 10px;
     grid-area: header;
-
     font-family: sans-serif;
     font-weight: lighter;
     color: #000000;
     font-size: 3.6rem;
     text-align: center;
+    position: relative;
     margin: auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+            -webkit-linear-gradient(var(--background-color), rgba(135, 60, 255, 0.0) 0%),
+    -webkit-linear-gradient(-45deg, var(--background-color) 50%, rgb(0, 40, 40) 0%);
+    box-shadow: gray 2px 2px 5px;
 }
 
 #main {
@@ -61,7 +78,6 @@ body {
 
 #middle {
     grid-area: middle;
-    background-color: #e3e3e3;
     text-align: center;
 }
 
