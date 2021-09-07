@@ -39,8 +39,6 @@
     line-height: 100px;
     text-align: center;
     font-size: 3em;
-    font-family: sans-serif;
-    font-weight: lighter;
 }
 
 .misc-flexbox .item:hover {
@@ -54,16 +52,16 @@
 .project-item {
     display: flex;
     justify-content: center;
-    font-family: sans-serif;
     align-items: center;
     text-decoration: none;
     flex-grow: 1;
     flex-basis: auto;
     padding: 20px 10px 20px;
-    border-radius: 10px;
-    color: #eaf5f5;
+    border-radius: 2px;
+    background-color: #b8eeef!important;
+    color: #002828;
     text-align: center;
-    font-size: 3em;
+    font-size: 2.5em;
     margin: 5px;
     max-width: 34%;
 }

@@ -4,6 +4,7 @@
 
 body {
     background-color: var(--background-color);
+    font-family: "Century Gothic", sans-serif;
     height:100%;
     min-width: 1000px;
     max-width: 2000px;
@@ -46,13 +47,14 @@ body {
     #right-area-upper {
         display: none;
     }
+    #content {
+        border-radius: 0px!important;
+    }
 
 }
 #header {
     border-radius: 10px;
     grid-area: header;
-    font-family: sans-serif;
-    font-weight: lighter;
     color: #000000;
     font-size: 3.6rem;
     text-align: center;
@@ -96,10 +98,12 @@ body {
 }
 #content{
     grid-area: content;
-    border-radius: 20px;
+    border-radius: 2px;
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
+    background-color: #002828;
+    margin-top: 40px;
     /*background-color: #fdfdfd;*/
 }
 
@@ -107,5 +111,4 @@ body {
     grid-area: footer;
     /*background-color: #ffffff;*/
     text-align: center;
-    font-family: sans-serif;
 }
