@@ -1,3 +1,5 @@
+@import "base.css";
+
 .image-container {
     height: 100%;
     width: 100%;
@@ -11,7 +13,7 @@
 
 .header-text {
     background: -webkit-linear-gradient(var(--background-color), rgba(135, 60, 255, 0.0) 0%),
-    -webkit-linear-gradient(-45deg, black 50%, #b8eeef 0%);
+    -webkit-linear-gradient(-45deg, black 50%, var(--tertiary-color) 0%);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -32,8 +34,8 @@
     width: 200px;
     height: 100%;
     text-decoration: none;
-    color: #b8eeef;
-    background-color: #002828;
+    color: var(--tertiary-color);
+    background-color: var(--secondary-color);
     margin-left: 10px;
     margin-right: 10px;
     line-height: 100px;
@@ -58,30 +60,87 @@
     flex-basis: auto;
     padding: 20px 10px 20px;
     border-radius: 2px;
-    background-color: #b8eeef!important;
-    color: #002828;
+    background-color: var(--tertiary-color) !important;
+    color: var(--secondary-color);
     text-align: center;
     font-size: 2.5em;
     margin: 5px;
     max-width: 34%;
+    transition-duration: 1s;
+    transition-property: background-color, opacity;
 }
 
+.filter-item:hover,
 .project-item:hover {
     filter: brightness(120%);
 }
 
+.filter-item:active,
 .project-item:active {
     filter: brightness(70%);
 }
 
-.website {
-    background-color: #ab3131;
+.red {
+    background-color: #ab3131 !important;
+    transition-duration: 1s;
 }
 
-.ai {
-    background-color: #5b93b3;
+.blue {
+    background-color: #5b93b3 !important;
+    transition-duration: 1s;
 }
 
-.misc {
-    background-color: #67b758;
+.green {
+    background-color: #67b758 !important;
+    transition-duration: 1s;
+}
+
+.filter_container {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.filter-icon {
+    padding: 2px;
+    max-height: 30px;
+    color: var(--secondary-color);
+    margin-right: 10px;
+    transition-duration: 0.5s;
+}
+
+.rotated {
+    transition-duration: 0.5s;
+    transform: rotate(-90deg);
+}
+
+.filter-item {
+    padding: 5px 20px 5px;
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+    transition-duration: 1s;
+    transition-property: opacity;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.no-display {
+    transition-duration: 1s;
+    opacity: 0;
+    transition-property: opacity;
+}
+
+.active {
+    filter: brightness(100%);
+}
+
+.not_active {
+    filter: brightness(50%);
+}
+
+.lower-opacity {
+    transition-duration: 1s;
+    opacity: 0.1;
+    transition-property: opacity;
 }
