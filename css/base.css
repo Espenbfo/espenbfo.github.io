@@ -1,7 +1,7 @@
 :root {
-    --background-color: #ececec;
-    --secondary-color: #002828;
-    --tertiary-color: #b8eeef;
+    --background-color: #fffdfd;
+    --secondary-color: #003153;
+    --tertiary-color: #e9f5f1;
 }
 
 body {
@@ -31,7 +31,7 @@ body {
         grid-template-columns: 2fr 2fr;
         grid-template-rows: 40px 250px 40px 600px 40px 100px 1fr;
         grid-template-areas:
-        ". ."
+        "header header"
         "header header"
         ". ."
         "left-area-upper left-area-upper"
@@ -71,7 +71,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: -webkit-linear-gradient(-45deg, var(--background-color) 49.95%, var(--secondary-color) 50.05%);
+    background: -webkit-linear-gradient(-10deg, rgb(240, 240, 240) 29.95%, #d4d9d8 30.05%);
     box-shadow: gray 2px 2px 5px;
 }
 
@@ -102,7 +102,7 @@ body {
 
 #content {
     grid-area: content;
-    border-radius: 2px;
+    border-radius: 6px;
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
