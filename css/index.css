@@ -13,9 +13,17 @@
 }
 
 .header-text {
-    background: -webkit-linear-gradient(-120deg, black 50%, #676e6e 0%);
+    background:
+            linear-gradient(80deg, rgb(214, 231, 255) 29.95%, transparent 30.05%),
+            linear-gradient(210deg, #fffbfb 49.95%, #163481 50.05%);
     font-size: 3rem;
     font-weight: normal;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    margin: auto;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;

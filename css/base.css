@@ -1,7 +1,7 @@
 :root {
     --background-color: #fffdfd;
-    --secondary-color: #003153;
-    --tertiary-color: #e9f5f1;
+    --secondary-color: #222b57;
+    --tertiary-color: #fff4f4;
 }
 
 body {
@@ -63,6 +63,9 @@ body {
     color: #000000;
     font-size: 3.6rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     margin: auto;
     height: 100%;
@@ -71,7 +74,9 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: -webkit-linear-gradient(-10deg, rgb(240, 240, 240) 29.95%, #d4d9d8 30.05%);
+    background:
+            linear-gradient(80deg, rgba(31, 62, 105, 1) 29.95%, transparent 30.05%),
+            linear-gradient(210deg, #222b57 49.95%, #fff4f4 50.05%);
     box-shadow: gray 2px 2px 5px;
 }
 
