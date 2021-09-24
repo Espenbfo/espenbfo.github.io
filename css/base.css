@@ -23,6 +23,14 @@ body {
     ". footer footer footer ."
 }
 
+
+@media (min-width: 1000px) and (max-width: 1500px) {
+    body {
+
+        grid-template-rows: 40px 150px 40px 100px auto 1fr!important;
+    }
+}
+
 @media (max-width: 1000px) {
     body {
         min-width: 100%;
