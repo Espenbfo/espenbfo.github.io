@@ -7,20 +7,38 @@
 
 .image-container img {
     height: 100%;
+    width: 70%;
     object-fit: cover;
     border-radius: 20px;
 }
 
 .header-text {
-    background: -webkit-linear-gradient(var(--background-color), rgba(135, 60, 255, 0.0) 0%),
-    -webkit-linear-gradient(-45deg, black 50%, var(--tertiary-color) 0%);
-    background-clip: text;
+    background: -webkit-linear-gradient(-45deg, black 50%, var(--tertiary-color) 0%);
+    font-size: 3rem;
+    font-weight: normal;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     -webkit-text-fill-color: transparent;;
 
 }
+
+@media (min-width: 1000px) and (max-width: 1500px) {
+    .project-item {
+        font-size: 1.4rem !important;
+    }
+
+
+}
+
+@media (max-width: 1000px) {
+    .filter-item {
+        font-size: 2.2rem !important;
+        margin-bottom: 20px !important;
+        margin-top: 20px !important;
+    }
+}
+
 
 .misc-flexbox {
     display: flex;
@@ -97,23 +115,21 @@
 
 .filter_container {
     width: 100%;
-    padding: 10px;
+    margin: 0 10px 10px;
+    padding-bottom: 5px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .filter-icon {
-    padding: 2px;
-    max-height: 30px;
+    padding: 2px 10px 2px 2px;
+    max-height: 20px;
     color: var(--secondary-color);
     margin-right: 10px;
     transition-duration: 0.5s;
 }
 
-.rotated {
-    transition-duration: 0.5s;
-    transform: rotate(-90deg);
-}
 
 .filter-item {
     padding: 5px 20px 5px;
@@ -121,8 +137,14 @@
     color: var(--secondary-color);
     transition-duration: 1s;
     transition-property: opacity;
-    margin-right: 10px;
+    margin: 0 5px 0;
     cursor: pointer;
+}
+
+.filter-label {
+    color: var(--tertiary-color);
+    font-size: 1.25rem !important;
+    padding: 5px 3px 5px 5px;
 }
 
 .no-display {
@@ -143,4 +165,6 @@
     transition-duration: 1s;
     opacity: 0.1;
     transition-property: opacity;
+    pointer-events: none;
+    user-select: none;
 }

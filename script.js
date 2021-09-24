@@ -1,8 +1,3 @@
-$(".filter-icon").click(function () {
-    $(".filter-item").toggleClass("no-display")
-    $(".filter-icon").toggleClass("rotated")
-})
-
 let categoryActive = ""
 
 function lower_opacity(name) {
