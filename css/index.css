@@ -19,13 +19,16 @@
     font-size: 3rem;
     font-weight: normal;
     width: 100%;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     height: 100%;
     align-items: center;
-    margin: auto;
     -webkit-background-clip: text;
     color: transparent;
+}
+
+.header span {
+    margin: auto;
 }
 
 @media (min-width: 1000px) and (max-width: 1500px) {
