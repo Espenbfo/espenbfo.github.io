@@ -13,22 +13,18 @@
 }
 
 .header-text {
-    background:
-            linear-gradient(80deg, rgb(214, 231, 255) 29.95%, transparent 30.05%),
-            linear-gradient(210deg, #fffbfb 49.95%, #163481 50.05%);
+    background: linear-gradient(80deg, rgb(214, 231, 255) 29.95%, transparent 30.05%),
+    linear-gradient(210deg, #fffbfb 49.95%, #163481 50.05%);
     font-size: 3rem;
     font-weight: normal;
     width: 100%;
-    display: flex;
-    justify-content: center;
     height: 100%;
-    align-items: center;
     -webkit-background-clip: text;
     color: transparent;
+    line-height: 250px;
 }
 
-.header span {
-    margin: auto;
+.header-text span {
 }
 
 @media (min-width: 1000px) and (max-width: 1500px) {

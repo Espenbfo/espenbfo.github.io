@@ -26,8 +26,11 @@ body {
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     body {
-
         grid-template-rows: 40px 150px 40px 100px auto 1fr!important;
+    }
+    .header-text {
+        line-height: 150px!important;
+        font-size: 2.3rem!important;
     }
 }
 
@@ -55,6 +58,10 @@ body {
         border-radius: 0 !important;
     }
 
+    .header-text {
+        line-height: 290px!important;
+        font-size: 3.5rem!important;
+    }
     #right-area-upper {
         display: none;
     }
@@ -75,12 +82,8 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin: auto;
     height: 100%;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
     background:
             linear-gradient(80deg, rgba(31, 62, 105, 1) 29.95%, transparent 30.05%),
