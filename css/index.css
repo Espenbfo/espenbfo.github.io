@@ -25,10 +25,7 @@
     align-items: center;
     margin: auto;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    -webkit-text-fill-color: transparent;;
-
+    color: transparent;
 }
 
 @media (min-width: 1000px) and (max-width: 1500px) {
