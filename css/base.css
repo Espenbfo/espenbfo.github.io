@@ -1,6 +1,6 @@
 :root {
     --background-color: #fffdfd;
-    --secondary-color: #222b57;
+    --secondary-color: #1F3E69;
     --tertiary-color: #fff4f4;
 }
 
@@ -91,7 +91,7 @@ body {
     width: 100%;
     overflow: hidden;
     background:
-            linear-gradient(80deg, rgba(31, 62, 105, 1) 29.95%, transparent 30.05%),
+            linear-gradient(80deg, rgb(31, 62, 105) 29.95%, transparent 30.05%),
             linear-gradient(210deg, #222b57 49.95%, #fff4f4 50.05%);
     box-shadow: gray 2px 2px 5px;
 }
