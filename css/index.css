@@ -89,7 +89,7 @@
     text-align: center;
     font-size: 2.5em;
     margin: 5px;
-    max-width: 34%;
+    max-width: 50%;
     transition-duration: 1s;
     transition-property: background-color, opacity;
     z-index: 1;
