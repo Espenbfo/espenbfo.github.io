@@ -76,7 +76,15 @@ void main() {
     float length = sqrt((u_resolution.x)*(u_resolution.x) + (u_resolution.y)*(u_resolution.y));
     float st_mouse = sqrt((gl_FragCoord.x-scaled_mouse.x)*(gl_FragCoord.x-scaled_mouse.x) + (gl_FragCoord.y-scaled_mouse.y)*(gl_FragCoord.y-scaled_mouse.y))/length;
     float filtered = st_mouse;
-  gl_FragColor = vec4(0.121+filtered*0.02, 0.243-filtered*0.02, 0.412-filtered*0.1, 1.0);
+    if (filtered > 1.0)
+    {
+        filtered = 1.0;
+    }
+    else if (filtered < 0.0)
+    {
+        filtered = 0.0;
+    }
+  gl_FragColor = vec4(0.121+filtered*0.04, 0.243-filtered*0.04, 0.412-filtered*0.1, 1.0);
 }
 </script>
 <script type="x-shader/x-vertex" id="vertex-shader">
