@@ -20,6 +20,7 @@
     </div>
 </section>
 <article id="content">
+    <canvas id="shader"></canvas>
     <figure class="filter_container">
         <a class="filter-item ai-toggle">AI</a>
         <a class="filter-item website-toggle">Web</a>
@@ -52,6 +53,7 @@
     <a class="project-item misc" href="https://github.com/Espenbfo/shopping-list-java-project">
         Shopping List
     </a>
+
 </article>
 <section id="middle">
     <div class="misc-flexbox">
@@ -64,6 +66,26 @@
         <img src="img/espen_smil.jpg" alt="Smiling portrait of Espen Smiling">
     </div>
 </section>
+
+<script type="x-shader/x-fragment" id="fragment-shader">
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+void main() {
+    vec2 st = gl_FragCoord.xy/u_resolution.xy;
+    vec2 scaled_mouse = u_mouse.xy*u_resolution.xy;
+    float length = sqrt((u_resolution.x)*(u_resolution.x) + (u_resolution.y)*(u_resolution.y));
+    float st_mouse = sqrt((gl_FragCoord.x-scaled_mouse.x)*(gl_FragCoord.x-scaled_mouse.x) + (gl_FragCoord.y-scaled_mouse.y)*(gl_FragCoord.y-scaled_mouse.y))/length;
+    float filtered = st_mouse;
+  gl_FragColor = vec4(0.121+filtered*0.02, 0.243-filtered*0.02, 0.412-filtered*0.1, 1.0);
+}
+</script>
+<script type="x-shader/x-vertex" id="vertex-shader">
+void main() {
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+}
+</script>
+<script src="scripts/three.js"></script>
+<script src="scripts/shaders.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
