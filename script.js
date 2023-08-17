@@ -1,19 +1,26 @@
-let categoryActive = ""
+let categoryActive = "all"
 
 function lower_opacity(name) {
     $(`.filter-item`).removeClass("active")
-    $(".filter-item").removeClass("not_active")
+    $(".filter-item").removeClass("not-active")
+
     if (categoryActive === name) {
         $(".project-item").removeClass("lower-opacity")
-        categoryActive = ""
+        categoryActive = "all"
 
     } else {
         categoryActive = name;
-        $(`.${name}`).removeClass("lower-opacity")
-        $(`.project-item:not(.${name})`).addClass("lower-opacity")
-        $(`.${name}-toggle`).addClass("active")
-        $(`.filter-item:not(.${name}-toggle)`).addClass("not_active")
     }
+
+    $(`.${name}`).removeClass("lower-opacity")
+    if (name != "all") {
+        $(`.project-item:not(.${name})`).addClass("lower-opacity")
+    }
+    else {
+        $(".project-item").removeClass("lower-opacity")
+    }
+    $(`.${name}-toggle`).addClass("active")
+    $(`.filter-item:not(.${name}-toggle)`).addClass("not-active")
 }
 
 $(".ai-toggle").click(function () {
@@ -27,4 +34,7 @@ $(".website-toggle").click(function () {
 
 $(".misc-toggle").click(function () {
     lower_opacity("misc")
+})
+$(".all-toggle").click(function () {
+    lower_opacity("all")
 })

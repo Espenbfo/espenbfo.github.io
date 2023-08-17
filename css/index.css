@@ -14,8 +14,8 @@
 
 .header-text {
     background: linear-gradient(80deg, rgb(214, 231, 255) 29.95%, transparent 30.05%),
-    linear-gradient(210deg, #fffbfb 49.95%, #163481 50.05%);
-    font-size: 3rem;
+        linear-gradient(210deg, #fffbfb 49.95%, #163481 50.05%);
+    font-size: 4rem;
     font-weight: normal;
     width: 100%;
     height: 100%;
@@ -24,8 +24,7 @@
     line-height: 250px;
 }
 
-.header-text span {
-}
+.header-text span {}
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     .project-item {
@@ -40,6 +39,7 @@
         font-size: 2.2rem !important;
         margin-bottom: 20px !important;
         margin-top: 20px !important;
+        width: 12vw !important;
     }
 }
 
@@ -147,6 +147,9 @@
     transition-property: opacity;
     margin: 0 5px 0;
     cursor: pointer;
+    border-radius: 100000px;
+    width: 50px;
+    text-align: center;
 }
 
 .filter-label {
@@ -163,11 +166,14 @@
 
 .active {
     filter: brightness(100%);
+    outline: purple 0.12vw solid;
+    background-color: purple;
+    color: white;
+    outline-offset: 0.12vw;
+
 }
 
-.not_active {
-    filter: brightness(50%);
-}
+.not-active {}
 
 .lower-opacity {
     transition-duration: 1s;

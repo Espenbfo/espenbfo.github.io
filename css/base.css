@@ -13,29 +13,30 @@ body {
     background-color: var(--background-color);
     font-family: "Century Gothic", sans-serif;
     height: 100%;
-    min-width: 1000px;
+    min-width: 100vw;
     max-width: 2000px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 2fr 4fr 2fr 1fr;
     grid-template-rows: 40px 250px 40px 100px auto 1fr;
     grid-template-areas:
-    ". . . . ."
-    ". left-area-upper header right-area-upper ."
-    ". . . . ."
-    "middle middle middle middle middle"
-    ". content content content ."
-    ". footer footer footer ."
+        ". . . . ."
+        ". left-area-upper header right-area-upper ."
+        ". . . . ."
+        "middle middle middle middle middle"
+        ". content content content ."
+        ". footer footer footer ."
 }
 
 
 @media (min-width: 1000px) and (max-width: 1500px) {
     body {
-        grid-template-rows: 40px 150px 40px 100px auto 1fr!important;
+        grid-template-rows: 40px 150px 40px 100px auto 1fr !important;
     }
+
     .header-text {
-        line-height: 150px!important;
-        font-size: 2.3rem!important;
+        line-height: 150px !important;
+        font-size: 2.6rem !important;
     }
 }
 
@@ -43,30 +44,30 @@ body {
     body {
         min-width: 100%;
         max-width: unset;
-        height: unset;
+        height: 100vh;
         grid-template-columns: 2fr 2fr;
         grid-template-rows: 40px 250px 40px 600px 40px 100px 1fr;
         grid-template-areas:
-        "header header"
-        "header header"
-        ". ."
-        "left-area-upper left-area-upper"
-        ". ."
-        "middle middle"
-        "content content"
-        "footer footer";
+            "header header"
+            "header header"
+            ". ."
+            "left-area-upper left-area-upper"
+            ". ."
+            "middle middle"
+            "content content"
+            "content content";
     }
 
     #header {
-        font-size: 5rem !important;
         box-shadow: none !important;
         border-radius: 0 !important;
     }
 
     .header-text {
-        line-height: 290px!important;
-        font-size: 3.5rem!important;
+        line-height: 290px !important;
+        font-size: 5.3rem !important;
     }
+
     #right-area-upper {
         display: none;
     }
@@ -81,7 +82,6 @@ body {
     border-radius: 10px;
     grid-area: header;
     color: #000000;
-    font-size: 3.6rem;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -91,8 +91,8 @@ body {
     width: 100%;
     overflow: hidden;
     background:
-            linear-gradient(80deg, rgb(31, 62, 105) 29.95%, transparent 30.05%),
-            linear-gradient(210deg, #222b57 49.95%, #fff4f4 50.05%);
+        linear-gradient(80deg, rgb(31, 62, 105) 29.95%, transparent 30.05%),
+        linear-gradient(210deg, #222b57 49.95%, #fff4f4 50.05%);
     box-shadow: gray 2px 2px 5px;
 }
 
@@ -138,4 +138,5 @@ body {
     left: 0;
     top: 0;
     position: absolute;
+    z-index: -100000;
 }
